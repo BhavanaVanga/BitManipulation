@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		long long int m;
+		cin>>m;
+        long long int s=0;
+		for(long long int i=0;i<32;i++)
+		{
+			long long int n=m&1;
+			n=n<<(31-i);
+			s|=n;
+			m>>=1;
+		}
+		cout<<s<<"\n";
+	}
+	return 0;
+}
